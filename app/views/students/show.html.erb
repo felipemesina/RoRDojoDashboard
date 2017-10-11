@@ -1,0 +1,21 @@
+<h1><%= @student.dashboard.city %>'s <%= @student.first_name%> <%= @student.last_name%></h1>
+<h3>Email: <%= @student.email%> </h3>
+
+<p>Cohort</p>
+
+<table>
+  <thead>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Email</th>
+  </thead>
+  <tbody>
+    <% @cohort.each do |student| %>
+		  <tr>
+        <td><%= student.first_name %></td>
+			  <td><%= student.last_name %></td>
+			  <td><%= student.email %></td>
+		  </tr>
+		<% end %>
+  </tbody>
+</table>

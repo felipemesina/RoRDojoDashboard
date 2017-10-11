@@ -8,6 +8,8 @@ class DashboardsController < ApplicationController
 
   def show
     @dojo = Dashboard.find(params[:id])
+    @students = Dashboard.find(params[:id]).students.all
+
   end
 
   def edit
