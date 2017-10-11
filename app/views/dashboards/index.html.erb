@@ -4,6 +4,7 @@
     <th>Street</th>
     <th>City</th>
     <th>State</th>
+    <th>Actions</th>
   </tr>
   <% @dojos.each do |dojo| %>
   <tr>
@@ -11,6 +12,11 @@
     <td><%=dojo.street%></td>
     <td><%=dojo.city%></td>
     <td><%=dojo.state%></td>
+    <td>
+      <a href='/show/<%= dojo.id %>'>Show</a> |
+      <a href='/edit/<%= dojo.id %>'>Edit</a> |
+      <a href='/destroy/<%= dojo.id %>'>Destroy</a>
+    </td>
   </tr>
   <% end %>
 </table>
